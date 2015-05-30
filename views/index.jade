@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  form(name="input", action="/", method="post")
+    key Story
+      input(type="text", name="story")
+    input(type="submit", value="Submit")
+  
+  p= myid
+
+  each val in stories
+    p
+      a(href="#{val._id}") #{val.content}
+  if story
+    p #{story}
+  if stories
+    p #{stories}
+  if hasstory
+    p has story
+  else
+    p has no story
+      
