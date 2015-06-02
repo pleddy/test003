@@ -1,9 +1,9 @@
-var myexpress = require('express');
-var myrouter = myexpress.Router();
+var express = require('express');
+var router = express.Router();
 var controller_home = require('../controllers/index.js')
 
-myrouter.get('/', controller_home.index );
-myrouter.post('/', controller_home.index );
-myrouter.get('/:id', controller_home.index );
+router.get('/', controller_home.index );
+router.post('/', controller_home.index );
+router.get('/:id', controller_home.index );
 
-module.exports = myrouter;
+module.exports = router;

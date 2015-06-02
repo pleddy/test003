@@ -1,11 +1,26 @@
 extends layout
 
 block content
+  if sess.email
+    table
+      tr
+        td= sess.email
+        td 
+          form(name="input", action="/", method="post")
+            input(type="submit", value="logout", name="submit")
+  else
+    form(name="input", action="/", method="post")
+      Email: input(type="text", name="email") 
+      input(type="submit", value="login", name="submit")
+
+  p &nbsp;
+  
   form(name="input", action="/", method="post")
     key Story
       input(type="text", name="story")
     input(type="submit", value="Submit")
-  
+
+
   p= myid
 
   each val in stories

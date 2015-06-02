@@ -5,9 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var session = require('express-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+mongoose.connect('mongodb://localhost/stories');
+mongoose.connection.on('open', function() {console.log('Mongoose connected.'); });
+var MongoStore = require('connect-mongo')(session);
 
 var app = express();
 
@@ -22,6 +27,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+  session(
+    {
+      secret: 'ziKologiia',
+      clear_interval: 900,
+      cookie: { maxAge: 2 * 60 * 60 * 1000 },
+      store: new MongoStore({ mongooseConnection: mongoose.connections[0] })
+    }
+  )
+);
 
 app.use('/', routes);
 app.use('/users', users);
@@ -55,11 +71,6 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
-});
-
-mongoose.connect('mongodb://localhost/stories');
-mongoose.connection.on('open', function() {
-    console.log('Mongoose connected.');
 });
 
 module.exports = app;
