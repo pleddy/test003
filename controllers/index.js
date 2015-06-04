@@ -26,7 +26,6 @@ module.exports = {
         function(err, story) {
           StoryModel
             .find({})
-            .sort('-timestamp')
             .exec(
               function(err, stories) {
                 if (err) { throw err; }
@@ -37,10 +36,9 @@ module.exports = {
         );
     } else {
       sess = req.session;
-      console.log(sess);
+      //console.log(sess);
       StoryModel
         .find({})
-        .sort('-timestamp')
         .exec(
           function(err, stories) {
             if (err) { throw err; }
