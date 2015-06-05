@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  if sess.email
+  if sess.user_id
     table
       tr
         td= sess.email
         td 
           form(name="input", action="/", method="post")
             input(type="submit", value="logout", name="submit")
+    p= sess.user_id
   else
     form(name="input", action="/", method="post")
       Email: input(type="text", name="email") 
@@ -16,22 +17,16 @@ block content
   p &nbsp;
   
   form(name="input", action="/", method="post")
+    key Title
+      input(type="text", name="title")
+    p
     key Story
       input(type="text", name="story")
+    p
     input(type="submit", value="Submit")
 
 
-  p= myid
-
-  each val in stories
-    p
-      a(href="#{val._id}") #{val.content}
-  if story
-    p #{story}
   if stories
-    p #{stories}
-  if hasstory
-    p has story
-  else
-    p has no story
-      
+    each val in stories
+      p
+        a(href="#{val._id}") #{val.title}

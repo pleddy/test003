@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var StorySchema = new Schema ({
-    content: { type: String },
-    timestamp: { type: Date, default: Date.now }
+var UserSchema = new Schema ({
+    email: String,
+    stories: [{type: Schema.Types.ObjectId, ref: 'Story'}]
 });
 
-module.exports = mongoose.model('Story', StorySchema);
+module.exports = mongoose.model('User', UserSchema);
