@@ -3,10 +3,86 @@
 	{
 		"selected_items":
 		[
+			[
+				"ap",
+				"app_insts"
+			],
+			[
+				"my_m",
+				"my_master_log_pos"
+			],
+			[
+				"slave",
+				"slave_status"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "public/stylesheets/style.css",
+			"settings":
+			{
+				"buffer_size": 469,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/newstory.js",
+			"settings":
+			{
+				"buffer_size": 908,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 393,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/index.js",
+			"settings":
+			{
+				"buffer_size": 4674,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/newstory.jade",
+			"settings":
+			{
+				"buffer_size": 254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 189,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/nav.jade",
+			"settings":
+			{
+				"buffer_size": 166,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 544,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -40,26 +116,58 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/pleddy/dev/expressjs/test003",
-		"/Users/pleddy/dev/expressjs/test003/models",
-		"/Users/pleddy/dev/expressjs/test003/public"
+		"/Users/pleddy/dev/nodejs/test003",
+		"/Users/pleddy/dev/nodejs/test003/controllers",
+		"/Users/pleddy/dev/nodejs/test003/models",
+		"/Users/pleddy/dev/nodejs/test003/public",
+		"/Users/pleddy/dev/nodejs/test003/public/stylesheets",
+		"/Users/pleddy/dev/nodejs/test003/routes",
+		"/Users/pleddy/dev/nodejs/test003/views"
 	],
 	"file_history":
 	[
-		"/Users/pleddy/dev/expressjs/test003/models/user.js",
-		"/Users/pleddy/dev/expressjs/test003/models/story.js",
-		"/Users/pleddy/dev/expressjs/test003/app.js",
-		"/Users/pleddy/dev/expressjs/test003/npm-debug.log"
+		"/Users/pleddy/Desktop/meeting_notes_2015-07-02.txt",
+		"/Users/pleddy/dev/nodejs/test003/public/stylesheets/style.css",
+		"/Users/pleddy/dev/nodejs/test003/views/index.jade",
+		"/Users/pleddy/dev/nodejs/test003/stylesheets/style.css",
+		"/Users/pleddy/Documents/slice/mysql_clone/slavemaker.txt",
+		"/Users/pleddy/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/pleddy/dev/nodejs/test003/controllers/index.js",
+		"/Users/pleddy/dev/nodejs/test003/features.txt",
+		"/Users/pleddy/dev/nodejs/test003/routes/index.js",
+		"/Users/pleddy/Desktop/notes007.txt",
+		"/Users/pleddy/Desktop/cpe.txt",
+		"/Users/pleddy/Desktop/notes_pennard.txt",
+		"/Users/pleddy/dev/nodejs/webs002/client.html",
+		"/Users/pleddy/dev/nodejs/webs002/server.js",
+		"/Users/pleddy/bin/elb_check.rb",
+		"/Users/pleddy/dev/nodejs/websocket001/server.js",
+		"/Users/pleddy/dev/nodejs/websocket001/client.html",
+		"/Users/pleddy/bin/mysql_clone_poc.rb",
+		"/Users/pleddy/bin/mysql_slave_from_snapshot.rb",
+		"/Users/pleddy/Desktop/webs.js",
+		"/Users/pleddy/Documents/slice/mysql_clone/clone.sql",
+		"/Users/pleddy/bin/tests.rb",
+		"/Users/pleddy/secrets.json",
+		"/Users/pleddy/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/pleddy/Desktop/tmp00332",
+		"/Users/pleddy/bin/just_conn.rb",
+		"/Users/pleddy/Desktop/sfo2van",
+		"/Users/pleddy/Desktop/destroy001",
+		"/Users/pleddy/Desktop/scrap001.txt",
+		"/Users/pleddy/Desktop/destroythis",
+		"/Users/pleddy/dev/nodejs/test003/models/story.js"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -67,6 +175,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\n",
+			"cunt",
+			"routes",
+			"'us-east-1'",
+			"new",
+			"end",
+			"my_",
+			"my_master_log_file",
+			"my_mysql_password",
+			"my_mysql_user",
+			"rds_client",
+			"my_rds_client",
+			"my_client",
+			"creds",
+			"region_name",
+			"rds_instance",
+			"repl_password",
+			"my_mysql_user",
+			"repl_username",
+			"slave_status",
+			"my_repl_password",
+			"my_repl_username",
+			"aws_acct_id",
+			"iam_resource",
+			"password",
+			"username",
+			"region",
+			"slave_status",
+			"region",
+			"region_name",
+			"	"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -74,6 +213,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"zz",
+			"  "
 		],
 		"reverse": false,
 		"show_context": true,
@@ -84,18 +225,257 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "public/stylesheets/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								197,
+								197
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "controllers/newstory.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controllers/index.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/newstory.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/nav.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 21.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 29.0
 	},
 	"layout":
 	{
@@ -128,7 +508,7 @@
 	"project": "test003.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -137,17 +517,45 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"no",
+				"~/Desktop/notes007.txt"
+			],
+			[
+				"my",
+				"~/bin/mysql_clone_poc.rb"
+			],
+			[
+				"slav",
+				"~/Documents/slice/mysql_clone/slavemaker.txt"
+			],
+			[
+				"jade",
+				"views/index.jade"
+			],
+			[
+				"ind",
+				"controllers/index.js"
+			],
+			[
+				"tests.",
+				"~/bin/tests.rb"
+			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Documents/slice/dev/clone_db/clone_db.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -162,11 +570,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 347.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

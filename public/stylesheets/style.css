@@ -1,8 +1,39 @@
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow: auto;
 }
 
-a {
-  color: #00B7FF;
+.nav { 
+  width: 200px;
+  float:left;
+  margin-right: 40px;
+  background: #eee;
+  padding: 20px;
+}
+
+.content {
+  width: 500px;
+  float:left;
+  margin-right: 100px;
+  vertical-align: top;
+}
+
+.words {
+  width: 200px;
+  float:left;
+  margin-right: 40px;
+//  border: 1px solid black;
+}
+
+.wrap{
+  background: #eee;
+  margin: 0 auto;
+}
+
+.form {
+  clear: both;
+}
+
+div {
 }

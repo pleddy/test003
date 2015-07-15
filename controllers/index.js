@@ -1,6 +1,7 @@
 StoryModel = require('../models/story')
 UserModel = require('../models/user')
 express = require('express')
+_ = require("underscore");
 
 module.exports = {
   index: function(req, res) {
@@ -12,12 +13,12 @@ module.exports = {
     console.log("Session: %j", sess)
     console.log(req.body)
 
-    if ( req.body.submit == 'logout' ) {
+    if ( req.body.submit == 'logout' ) {                                 // logout
       console.log('action: logout')
       sess.user_id = null
       sess.email = null
       res.render('index', {})
-    } else if ( req.body.submit == 'login' && req.body.email ) {
+    } else if ( req.body.submit == 'login' && req.body.email ) {         // login
       console.log('action: login')
       query = UserModel
         .findOne({ 'email': req.body.email })
@@ -50,7 +51,7 @@ module.exports = {
             }
           }
         )
-    } else if ( req.body.story && sess.user_id ) {
+    } else if ( req.body.story && sess.user_id ) {            // submit story
       console.log('action: add story')
       query = UserModel
         .findOne({ _id: sess.user_id })
@@ -81,7 +82,23 @@ module.exports = {
             )
           }
         )
-    } else if ( sess.user_id ) {
+    } else if ( sess.user_id && req.params.id ) {                            // show story 
+      console.log('action: show selected story')
+      query = UserModel
+        .findOne({ _id: sess.user_id })
+        .populate('stories')
+        .exec(
+          function(err, user) {
+            if (err) return handleError(err)
+            StoryModel.findOne( {_id: req.params.id}, 'content', function (err, story) {
+                if (err) return 'shoot' 
+                words = parse_words(story.content)
+                res.render('index', { sess: sess, stories: user.stories, story: story, words: words }); 
+                console.log("Words: " + words)
+            } )
+          }
+        )
+    } else if ( sess.user_id ) {                            // show story 
       console.log('action: show existing stories only')
       query = UserModel
         .findOne({ _id: sess.user_id })
@@ -90,7 +107,7 @@ module.exports = {
           function(err, user) {
             if (err) return handleError(err)
             console.log(user)
-            res.render('index', { sess: sess, stories: user.stories });
+            res.render('index', { sess: sess, stories: user.stories, current_id: req.params.id });
           }
         )
     } else {
@@ -99,4 +116,19 @@ module.exports = {
     }
   }
 }
+
+function parse_words(my_string) { 
+  my_string = my_string.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()\'\"?]/g,'')
+  my_string = my_string.toLowerCase()
+  words = my_string.split(/[\s,]+/)
+  console.log("In: " + words)
+//  words = words.sort(function (a, b) {return a.toLowerCase().localeCompare(b.toLowerCase()); });  
+  words = words.sort()
+  words = _.uniq(words)
+  words = words.filter(function(str) { return str.length >= 4; });
+  return words
+}
+
+
+
 

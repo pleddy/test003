@@ -1,0 +1,45 @@
+* stories list
+  * counts
+    * how many words familiar
+    * how many words new
+    * color indicating hot/cold -> new/old ratio
+      * green to red scale
+        * green means easier
+        * red means harder
+* word list
+  * clicks
+    * click word known to put in known list
+    * click word not known yet to remove from known list
+  * counts
+    * seen
+  * color
+    * green, known 
+  * mouse-over / right-click
+    simple translation / large translation in bottom pane
+
+
+Functionality
+
+* add sound for words
+  * mouse-over ideally
+
+
+Relations
+
+user <- words known
+user <- words seen
+
+
+Problems
+
+* chicken/egg
+  * boring without content
+* no stories engine for authors
+
+
+Solutions
+
+* build authors story engine
+* create english stories for people learning english
+* add stories
+

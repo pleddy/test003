@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/pleddy/Documents/slice/dev/clone_db"
 		}
 	]
 }

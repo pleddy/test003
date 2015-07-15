@@ -4,4 +4,18 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    if sess.user_id
+      table
+        tr
+          td= sess.email
+          td 
+            form(name="input", action="/", method="post")
+              input(type="submit", value="logout", name="submit")
+      p= sess.user_id
+    else
+      form(name="input", action="/", method="post")
+        Email: input(type="text", name="email") 
+        input(type="submit", value="login", name="submit")
+
+    if sess.user_id
+      block content

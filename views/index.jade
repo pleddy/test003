@@ -1,32 +1,14 @@
 extends layout
 
 block content
-  if sess.user_id
-    table
-      tr
-        td= sess.email
-        td 
-          form(name="input", action="/", method="post")
-            input(type="submit", value="logout", name="submit")
-    p= sess.user_id
+  include nav
+  if story
+    .content
+        p= story.content
+    .words
+      each word in words
+       | #{word}
+       br
   else
-    form(name="input", action="/", method="post")
-      Email: input(type="text", name="email") 
-      input(type="submit", value="login", name="submit")
-
-  p &nbsp;
-  
-  form(name="input", action="/", method="post")
-    key Title
-      input(type="text", name="title")
-    p
-    key Story
-      input(type="text", name="story")
-    p
-    input(type="submit", value="Submit")
-
-
-  if stories
-    each val in stories
-      p
-        a(href="#{val._id}") #{val.title}
+    .content
+      | NONE

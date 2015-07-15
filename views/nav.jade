@@ -1,0 +1,11 @@
+.nav
+  | HOME
+  br 
+  a(href='/stories/new') New
+  br
+  if stories
+    each val in stories
+      p
+        a(href="/#{val._id}") #{val.title}
+  else
+    | No stories
