@@ -2,13 +2,5 @@ extends layout
 
 block content
   include nav
-  if story
-    .content
-        p= story.content
-    .words
-      each word in words
-       | #{word}
-       br
-  else
-    .content
-      | NONE
+  .content
+    | My home page, the Idiot

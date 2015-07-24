@@ -43,3 +43,5 @@ Solutions
 * create english stories for people learning english
 * add stories
 
+To do:
+  * clean up deleted stories from user

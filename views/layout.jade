@@ -9,13 +9,18 @@ html
         tr
           td= sess.email
           td 
-            form(name="input", action="/", method="post")
+            form(name="input", action="/logout", method="post")
               input(type="submit", value="logout", name="submit")
       p= sess.user_id
     else
-      form(name="input", action="/", method="post")
+      form(name="input", action="/login", method="post")
         Email: input(type="text", name="email") 
         input(type="submit", value="login", name="submit")
 
+    .status
+      if vm
+        if vm.status
+          .status
+            p= vm.status
     if sess.user_id
       block content
