@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  include ../nav
+  .content
+    if vm.stories
+        each val in vm.stories
+          p
+            a(href="/stories/view/#{val._id}") #{val.title}
+            | &nbsp;
+            a(href="/stories/remove/#{val._id}") Remove 
+      else
+        | No stories

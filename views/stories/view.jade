@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  include ../nav
+  .content
+    if vm.status
+      .status
+        p= vm.status
+    if vm.story
+      .story
+        p= vm.story.content
+        p
+          a(href="/stories/remove/#{vm.story._id}") Remove
+      .vm.words
+         each word in vm.words
+          | #{word}
+          br
+    else
+      | Story is blank?

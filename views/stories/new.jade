@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  include ../nav
+  .content
+    | Add New Story
+    p
+    form(name="input", action="/stories/add", method="post")
+      | Title: &nbsp;
+      input(type="text", name="title") 
+      p
+      | Content:
+      br
+      textarea(name="content", cols=80, rows=40)
+      p
+      input(type="hidden", name="user_id", value="#{vm.sess.user_id}")
+      input(type="submit", value="Submit")
+
+
+
