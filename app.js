@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var expressSession = require('express-session');
 var connectMongo = require('connect-mongo');
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var users = require('./routes/users');
 var stories = require('./routes/stories');
 
@@ -46,9 +46,9 @@ app.use(
   )
 );
 
-app.use('/', routes);
-app.use('/login', routes);
-app.use('/logout', routes);
+app.use('/', index);
+app.use('/login', index);
+app.use('/logout', index);
 app.use('/users', users);
 app.use('/stories', stories);
 app.use('/admin', function(req, res, next) {

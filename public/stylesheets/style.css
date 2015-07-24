@@ -47,6 +47,7 @@ body {
 .status {
   background: #D5393B;
   color: white;
+  float: right;
 }
 
 div {

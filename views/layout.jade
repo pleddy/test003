@@ -17,10 +17,5 @@ html
         Email: input(type="text", name="email") 
         input(type="submit", value="login", name="submit")
 
-    .status
-      if vm
-        if vm.status
-          .status
-            p= vm.status
     if sess.user_id
       block content

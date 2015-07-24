@@ -1,4 +1,5 @@
 User = require('../models/user').User
+userService = require('../services/user-service')
 
 module.exports = {
 
@@ -8,32 +9,34 @@ module.exports = {
     user = null
 
     console.log('action: home page')
+    sess.message = ''
     res.render('index');
   },
 
   login: function(req, res) {
     sess = req.session;
 
-    console.log('action: login ' + req.body.email)
+    if (!req.body.email) {
+      return res.redirect('/');
+    }
+
     User.findOne(
       { 'email': req.body.email },
       function(err, user) {
         if (err) {
-          sess.status = 'User had errors'
-          res.redirect('/')
+          sess.message = 'Finding user had errors'
+          return res.redirect('/')
         }
         if ( !user ) {
-          newUser = new User({ email: req.body.email })
-          console.log('newUser: ' + newUser)
-          newUser.save(
-            function(err,user) {
-              if (err) throw err 
-              sess.user_id = user.id
-              sess.email = user.email
-              console.log(sess.email)
-              res.redirect('/stories/list')
+          userService.addUser(req.body, function(err, user) {
+            if (err) {
+              return res.redirect('/stories/list')
             }
-          )
+            sess.user_id = user.id
+            sess.email = user.email
+            sess.save()
+            return res.redirect('/stories/list')
+          })
         } else {
           sess.user_id = user.id
           sess.email = user.email
@@ -46,8 +49,9 @@ module.exports = {
   logout: function(req, res) {
     sess = req.session;
     console.log('action: logout')
-    sess.user_id = null
-    sess.email = null
+//    sess.user_id = null
+//    sess.email = null
+    req.session.destroy();
     res.redirect('/')
   }
 

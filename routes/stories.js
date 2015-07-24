@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var controller_story = require('../controllers/story.js')
+var controller_story = require('../controllers/story')
 
 router.get('/new', controller_story.new );
 router.get('/list', controller_story.list );
